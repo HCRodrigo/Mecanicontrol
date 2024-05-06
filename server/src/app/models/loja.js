@@ -1,14 +1,14 @@
 const mysql = require("mysql2")
 const dbConfig = require("../config")
 
-class Cliente{
+class Loja{
     constructor(){
         this.conexao = mysql.createConnection(dbConfig.db)
     }
 
-    mostrarTudo(){
+    mostrarLojas(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM cliente"
+            let sql = "SELECT * FROM loja"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -19,10 +19,10 @@ class Cliente{
         })
     }   
 
-    Inserir(id_mecanico, nome, email, endereco, contato){
+    InserirLoja(nome, email, endereco, contato){
         return new Promise((resolve, reject)=>{
-            let sql = `INSERT INTO cliente (id_mecanico, nome, email, endereco, contato) 
-            VALUE ('${id_mecanico}','${nome}','${email}','${endereco}','${contato}')`
+            let sql = `INSERT INTO loja (nome, email, endereco, contato) 
+            VALUE ('${nome}','${email}','${endereco}','${contato}')`
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -34,4 +34,4 @@ class Cliente{
     }
 }
 
-module.exports = new Cliente()
+module.exports = new Loja()
