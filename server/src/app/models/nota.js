@@ -1,15 +1,14 @@
 const mysql = require("mysql2")
 const dbConfig = require("../config")
-const bcrypt = require("bcryptjs") 
 
-class Cliente{
+class Mecanico{
     constructor(){
         this.conexao = mysql.createConnection(dbConfig.db)
     }
 
     mostrarTudo(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM cliente"
+            let sql = "SELECT * FROM nota"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -20,22 +19,22 @@ class Cliente{
         })
     }   
 
-    Inserir(id_mecanico, nome, email, endereco, contato){
+    Inserir(id_mecanico, id_loja, codigo, n_fabricacao, descricao, qtd, unidade, valor, valor_unidade, local_peca){
         return new Promise((resolve, reject)=>{
-            let sql = `INSERT INTO cliente (id_mecanico, nome, email, endereco, contato) 
-            VALUE ('${id_mecanico}','${nome}','${email}','${endereco}','${contato}')`
+            let sql = `INSERT INTO nota (id_mecanico, id_loja, codigo, n_fabricacao, descricao, qtd, unidade, valor, valor_unidade, local_peca) 
+            VALUE ('${id_mecanico}','${id_loja}','${codigo}','${n_fabricacao}','${descricao}','${qtd}','${unidade}','${valor}','${valor_unidade}','${local_peca}')`
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
                 }else{
-                    resolve([201,'Usuário Inserido'])
+                    resolve([201,'Nota Inserido'])
                 }
             })
         })
     }
 
-    selecionarCliente(id) {
-        let sql = `SELECT * FROM cliente WHERE id="${id}";`
+    selecionarNota(id) {
+        let sql = `SELECT * FROM nota WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -48,8 +47,10 @@ class Cliente{
         })
     }
 
-    atualizar(id, id_mecanico, nome, email, endereco, contato) {
-        let sql = `UPDATE cliente SET id_mecanico="${id_mecanico}", nome="${nome}", email="${email}", endereco="${endereco}", contato="${contato}"  WHERE id="${id}";`
+    atualizar(id, id_mecanico, id_loja, codigo, n_fabricacao, descricao, qtd, unidade, valor, valor_unidade, local_peca) {
+        let sql = `UPDATE nota SET id_mecanico="${id_mecanico}", id_loja="${id_loja}", codigo="${codigo}", n_fabricacao="${n_fabricacao}", 
+        descricao="${descricao}", qtd="${qtd}", unidade="${unidade}", valor="${valor}", valor_unidade="${valor_unidade}", 
+        local_peca="${local_peca}",  WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -62,7 +63,7 @@ class Cliente{
     }
 
     deletar(id) {
-        let sql = `DELETE FROM cliente WHERE id="${id}";`
+        let sql = `DELETE FROM nota WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -81,4 +82,4 @@ class Cliente{
     }
 }
 
-module.exports = new Cliente()
+module.exports = new Mecanico()

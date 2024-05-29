@@ -1,8 +1,8 @@
-const lojas = require("../models/loja")
+const carros = require("../models/carro")
 
 class MecanicoController{
     index(req,res){
-        lojas.mostrarTudo().then(
+        carros.mostrarTudo().then(
             respostas =>{
                 res.status(respostas[0]).json(respostas[1])
             }
@@ -14,8 +14,8 @@ class MecanicoController{
     }
     
     create(req,res){
-        let {nome, email, senha, endereco, contato} = req.body
-        lojas.Inserir(nome, email, senha, endereco, contato).then(
+        let {id_cliente, marca, modelo, ano, historico_manutencao} = req.body
+        carros.Inserir(id_cliente, marca, modelo, ano, historico_manutencao).then(
             respostas =>{
                 res.status(respostas[0]).json(respostas[1])
             }
@@ -29,14 +29,14 @@ class MecanicoController{
     get(req, res) {
         let { id } = req.params
 
-        lojas.selecionarLoja(id).then(
+        carros.selecionarCarro(id).then(
             resposta => {
-                console.debug("Exibindo Loja")
+                console.debug("Exibindo Carro")
                 res.status(resposta[0]).json(resposta[1])
             }
         ).catch(
             resposta => {
-                console.debug("Erro: Exibindo Loja")
+                console.debug("Erro: Exibindo Carro")
                 res.status(resposta[0]).json(resposta[1])
             }
         )
@@ -44,16 +44,16 @@ class MecanicoController{
 
     update(req, res) {
         let { id } = req.params
-        let {nome, email, senha, endereco, contato} = req.body
+        let { id_cliente, marca, modelo, ano, historico_manutencao } = req.body
 
-        lojas.atualizar(id, nome, email, senha, endereco, contato).then(
+        carros.atualizar(id, id_cliente, marca, modelo, ano, historico_manutencao).then(
             resposta => {
-                console.debug("Atualizando Loja")
+                console.debug("Atualizando Carro")
                 res.status(resposta[0]).json(resposta[1])
             }
         ).catch(
             resposta => {
-                console.debug("Erro: Atualizando Loja")
+                console.debug("Erro: Atualizando Carro")
                 res.status(resposta[0]).json(resposta[1])
             }
         )
@@ -62,14 +62,14 @@ class MecanicoController{
     delete(req, res) {
         let { id } = req.params
 
-        lojas.deletar(id).then(
+        carros.deletar(id).then(
             resposta => {
-                console.debug("Deletando Loja")
+                console.debug("Deletando Carro")
                 res.status(resposta[0]).json(resposta[1])
             }
         ).catch(
             resposta => {
-                console.debug("Erro: Deletando Loja")
+                console.debug("Erro: Deletando Carro")
                 res.status(resposta[0]).json(resposta[1])
             }
         )

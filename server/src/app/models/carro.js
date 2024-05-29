@@ -1,15 +1,14 @@
 const mysql = require("mysql2")
 const dbConfig = require("../config")
-const bcrypt = require("bcryptjs") 
 
-class Cliente{
+class Mecanico{
     constructor(){
         this.conexao = mysql.createConnection(dbConfig.db)
     }
 
     mostrarTudo(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM cliente"
+            let sql = "SELECT * FROM carro"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -20,10 +19,10 @@ class Cliente{
         })
     }   
 
-    Inserir(id_mecanico, nome, email, endereco, contato){
+    Inserir(id_cliente, marca, modelo, ano, historico_manutencao){
         return new Promise((resolve, reject)=>{
-            let sql = `INSERT INTO cliente (id_mecanico, nome, email, endereco, contato) 
-            VALUE ('${id_mecanico}','${nome}','${email}','${endereco}','${contato}')`
+            let sql = `INSERT INTO carro (id_cliente, marca, modelo, ano, historico_manutencao) 
+            VALUE ('${id_cliente}','${marca}','${modelo}','${ano}','${historico_manutencao}')`
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -34,8 +33,8 @@ class Cliente{
         })
     }
 
-    selecionarCliente(id) {
-        let sql = `SELECT * FROM cliente WHERE id="${id}";`
+    selecionarCarro(id) {
+        let sql = `SELECT * FROM carro WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -48,8 +47,8 @@ class Cliente{
         })
     }
 
-    atualizar(id, id_mecanico, nome, email, endereco, contato) {
-        let sql = `UPDATE cliente SET id_mecanico="${id_mecanico}", nome="${nome}", email="${email}", endereco="${endereco}", contato="${contato}"  WHERE id="${id}";`
+    atualizar(id, id_cliente, marca, modelo, ano, historico_manutencao) {
+        let sql = `UPDATE carro SET id_cliente="${id_cliente}", marca="${marca}", modelo="${modelo}", ano="${ano}", historico_manutencao="${historico_manutencao}"  WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -62,7 +61,7 @@ class Cliente{
     }
 
     deletar(id) {
-        let sql = `DELETE FROM cliente WHERE id="${id}";`
+        let sql = `DELETE FROM carro WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -81,4 +80,4 @@ class Cliente{
     }
 }
 
-module.exports = new Cliente()
+module.exports = new Mecanico()
