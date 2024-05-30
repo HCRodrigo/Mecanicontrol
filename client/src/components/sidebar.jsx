@@ -16,31 +16,31 @@ function Home() {
                     <div class="sidebar-content">
                         <ul class="lists">
                             <li class="list">
-                                <a href="#" class="nav-link">
+                                <a href="/home" class="nav-link">
                                     <i class='bx bxs-home icon' ></i>
                                     <span class="link">Home</span>
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="#" class="nav-link">
+                                <a href="/cliente" class="nav-link">
                                     <i class='bx bxs-user icon' ></i>
                                     <span class="link">Clientes</span>
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="#" class="nav-link">
+                                <a href="/lojas" class="nav-link">
                                     <i class='bx bxs-store icon' ></i>
                                     <span class="link">Lojas</span>
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="#" class="nav-link">
+                                <a href="/notas" class="nav-link">
                                     <i class='bx bxs-notepad icon' ></i>
                                     <span class="link">Notas</span>
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="#" class="nav-link">
+                                <a href="/calendario" class="nav-link">
                                     <i class='bx bxs-calendar icon' ></i>
                                     <span class="link">Calendario</span>
                                 </a>
@@ -54,7 +54,7 @@ function Home() {
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="#" class="nav-link">
+                                <a href="/" class="nav-link">
                                     <i class='bx bx-log-in icon'></i>
                                     <span class="link">Sair</span>
                                 </a>
