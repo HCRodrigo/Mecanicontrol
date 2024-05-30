@@ -55,7 +55,7 @@ class Mecanico{
                 if (erro) {
                     reject([400, erro])
                 }
-                resolve([200, "Usuário Atualizado"])
+                resolve([200, "Mecanico Atualizado"])
             })
         })
     }
@@ -69,12 +69,31 @@ class Mecanico{
                     reject([400, erro])
                 } else {
                     if (retorno["affectedRows"] > 0) {
-                        resolve([200, "Usuário deletado"])
+                        resolve([200, "Mecanico deletado"])
                     } else {
-                        resolve([404, "Usuário não encontrado"])
+                        resolve([404, "Mecanico não encontrado"])
                     }
                 }
 
+            })
+        })
+    }
+
+    verificarLoginSenha(nome,senha){
+        let sql = `SELECT * FROM mecanico WHERE nome = '${nome}' AND senha = '${senha}'`
+
+        return new Promise((resolve, reject) => {
+            this.conexao.query(sql, function (erro, retorno) {
+                if (erro) {
+                    reject([400, erro])
+                }else{
+                    if(retorno.length === 0){
+                        resolve([404, "Mecanico não encontrado"])
+                    }else{
+                        let {id} = retorno[0]
+                        resolve([200, {id}])
+                    }
+                }                
             })
         })
     }

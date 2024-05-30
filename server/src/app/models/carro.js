@@ -27,7 +27,7 @@ class Mecanico{
                 if(error){
                     reject([400,error])
                 }else{
-                    resolve([201,'Usuário Inserido'])
+                    resolve([201,'Carro Inserido'])
                 }
             })
         })
@@ -69,9 +69,9 @@ class Mecanico{
                     reject([400, erro])
                 } else {
                     if (retorno["affectedRows"] > 0) {
-                        resolve([200, "Usuário deletado"])
+                        resolve([200, "Carro deletado"])
                     } else {
-                        resolve([404, "Usuário não encontrado"])
+                        resolve([404, "Carro não encontrado"])
                     }
                 }
 

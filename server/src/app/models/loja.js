@@ -55,7 +55,7 @@ class Mecanico{
                 if (erro) {
                     reject([400, erro])
                 }
-                resolve([200, "Usuário Atualizado"])
+                resolve([200, "Loja Atualizado"])
             })
         })
     }
@@ -69,9 +69,9 @@ class Mecanico{
                     reject([400, erro])
                 } else {
                     if (retorno["affectedRows"] > 0) {
-                        resolve([200, "Usuário deletado"])
+                        resolve([200, "Loja deletado"])
                     } else {
-                        resolve([404, "Usuário não encontrado"])
+                        resolve([404, "Loja não encontrado"])
                     }
                 }
 

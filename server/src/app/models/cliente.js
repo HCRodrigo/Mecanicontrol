@@ -28,7 +28,7 @@ class Cliente{
                 if(error){
                     reject([400,error])
                 }else{
-                    resolve([201,'Usuário Inserido'])
+                    resolve([201,'Cliente Inserido'])
                 }
             })
         })
@@ -56,7 +56,7 @@ class Cliente{
                 if (erro) {
                     reject([400, erro])
                 }
-                resolve([200, "Usuário Atualizado"])
+                resolve([200, "Cliente Atualizado"])
             })
         })
     }
@@ -70,9 +70,9 @@ class Cliente{
                     reject([400, erro])
                 } else {
                     if (retorno["affectedRows"] > 0) {
-                        resolve([200, "Usuário deletado"])
+                        resolve([200, "Cliente deletado"])
                     } else {
-                        resolve([404, "Usuário não encontrado"])
+                        resolve([404, "Cliente não encontrado"])
                     }
                 }
 

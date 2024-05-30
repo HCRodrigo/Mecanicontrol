@@ -74,6 +74,22 @@ class MecanicoController{
             }
         )
     }
+
+    logar(req, res){
+        let {nome,senha} = req.body
+
+        mecanicos.verificarLoginSenha(nome, senha).then(
+            resposta=>{
+                console.debug("Efetuando Login")
+                res.status(resposta[0]).json(resposta[1])
+            }
+        ).catch(
+            resposta=>{
+                console.debug("Erro: Efetuando Login")
+                res.status(resposta[0]).json(resposta[1])
+            }
+        )
+    }    
 }
 
 module.exports = new MecanicoController()
