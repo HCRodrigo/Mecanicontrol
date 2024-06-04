@@ -1,0 +1,11 @@
+body{
+    min-height: 100%;
+    color: white;
+}
+
+.container{
+    width: 500px; /* Define a largura da div content */
+    margin-left: 300px; /* Move a div content para a direita */
+    margin-right: auto;
+    margin-top: 110px;
+}

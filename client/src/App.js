@@ -4,6 +4,8 @@ import Cliente from './views/cliente/cliente';
 import Loja from './views/loja/loja';
 import Sidebar from './components/sidebar';
 import Logar from './views/Logar/index';
+import Nota from './views/nota/nota'
+import Agendamentos from './views/agendamento/agendamento'
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
       <Routes>
       <Route path='/' element={<Logar/>}/>
         <Route path='/cliente' element={<Cliente/>}/>
-        <Route path='/lojas' element={<Loja/>}/>
+        <Route path='/loja' element={<Loja/>}/>
+        <Route path='/nota' element={<Nota/>}/>
+        <Route path='/agendamento' element={<Agendamentos/>}/>
       </Routes>
     </BrowserRouter>
   );

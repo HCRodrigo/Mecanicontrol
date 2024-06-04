@@ -28,19 +28,19 @@ function Home() {
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="/lojas" class="nav-link">
+                                <a href="/loja" class="nav-link">
                                     <i class='bx bxs-store icon' ></i>
                                     <span class="link">Lojas</span>
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="/notas" class="nav-link">
+                                <a href="/nota" class="nav-link">
                                     <i class='bx bxs-notepad icon' ></i>
                                     <span class="link">Notas</span>
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="/calendario" class="nav-link">
+                                <a href="/agendamento" class="nav-link">
                                     <i class='bx bxs-calendar icon' ></i>
                                     <span class="link">Calendario</span>
                                 </a>
