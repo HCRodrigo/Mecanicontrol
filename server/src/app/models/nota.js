@@ -8,7 +8,7 @@ class Mecanico{
 
     mostrarTudo(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM loja"
+            let sql = "SELECT * FROM nota"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -19,22 +19,22 @@ class Mecanico{
         })
     }   
 
-    Inserir(nome, email, senha, endereco, contato){
+    Inserir(id_mecanico, id_loja, codigo, n_fabricacao, descricao, qtd, unidade, valor, valor_unidade, local_peca){
         return new Promise((resolve, reject)=>{
-            let sql = `INSERT INTO loja (nome, email, senha, endereco, contato) 
-            VALUE ('${nome}','${email}','${senha}','${endereco}','${contato}')`
+            let sql = `INSERT INTO nota (id_mecanico, id_loja, codigo, n_fabricacao, descricao, qtd, unidade, valor, valor_unidade, local_peca) 
+            VALUE ('${id_mecanico}','${id_loja}','${codigo}','${n_fabricacao}','${descricao}','${qtd}','${unidade}','${valor}','${valor_unidade}','${local_peca}')`
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
                 }else{
-                    resolve([201,'Loja Inserido'])
+                    resolve([201,'Nota Inserido'])
                 }
             })
         })
     }
 
-    selecionarLoja(id) {
-        let sql = `SELECT * FROM loja WHERE id="${id}";`
+    selecionarNota(id) {
+        let sql = `SELECT * FROM nota WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -47,21 +47,23 @@ class Mecanico{
         })
     }
 
-    atualizar(id, nome, email, senha, endereco, contato) {
-        let sql = `UPDATE loja SET nome="${nome}", email="${email}", senha="${senha}", endereco="${endereco}", contato="${contato}"  WHERE id="${id}";`
+    atualizar(id, id_mecanico, id_loja, codigo, n_fabricacao, descricao, qtd, unidade, valor, valor_unidade, local_peca) {
+        let sql = `UPDATE nota SET id_mecanico="${id_mecanico}", id_loja="${id_loja}", codigo="${codigo}", n_fabricacao="${n_fabricacao}", 
+        descricao="${descricao}", qtd="${qtd}", unidade="${unidade}", valor="${valor}", valor_unidade="${valor_unidade}", 
+        local_peca="${local_peca}",  WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
                 if (erro) {
                     reject([400, erro])
                 }
-                resolve([200, "Loja Atualizado"])
+                resolve([200, "Nota Atualizado"])
             })
         })
     }
 
     deletar(id) {
-        let sql = `DELETE FROM loja WHERE id="${id}";`
+        let sql = `DELETE FROM nota WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -69,9 +71,9 @@ class Mecanico{
                     reject([400, erro])
                 } else {
                     if (retorno["affectedRows"] > 0) {
-                        resolve([200, "Loja deletado"])
+                        resolve([200, "Nota deletado"])
                     } else {
-                        resolve([404, "Loja não encontrado"])
+                        resolve([404, "Nota não encontrado"])
                     }
                 }
 

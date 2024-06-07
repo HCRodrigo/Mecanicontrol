@@ -8,7 +8,7 @@ class Mecanico{
 
     mostrarTudo(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM loja"
+            let sql = "SELECT * FROM carro"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -19,22 +19,22 @@ class Mecanico{
         })
     }   
 
-    Inserir(nome, email, senha, endereco, contato){
+    Inserir(id_cliente, marca, modelo, ano, historico_manutencao){
         return new Promise((resolve, reject)=>{
-            let sql = `INSERT INTO loja (nome, email, senha, endereco, contato) 
-            VALUE ('${nome}','${email}','${senha}','${endereco}','${contato}')`
+            let sql = `INSERT INTO carro (id_cliente, marca, modelo, ano, historico_manutencao) 
+            VALUE ('${id_cliente}','${marca}','${modelo}','${ano}','${historico_manutencao}')`
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
                 }else{
-                    resolve([201,'Loja Inserido'])
+                    resolve([201,'Carro Inserido'])
                 }
             })
         })
     }
 
-    selecionarLoja(id) {
-        let sql = `SELECT * FROM loja WHERE id="${id}";`
+    selecionarCarro(id) {
+        let sql = `SELECT * FROM carro WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -47,21 +47,21 @@ class Mecanico{
         })
     }
 
-    atualizar(id, nome, email, senha, endereco, contato) {
-        let sql = `UPDATE loja SET nome="${nome}", email="${email}", senha="${senha}", endereco="${endereco}", contato="${contato}"  WHERE id="${id}";`
+    atualizar(id, id_cliente, marca, modelo, ano, historico_manutencao) {
+        let sql = `UPDATE carro SET id_cliente="${id_cliente}", marca="${marca}", modelo="${modelo}", ano="${ano}", historico_manutencao="${historico_manutencao}"  WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
                 if (erro) {
                     reject([400, erro])
                 }
-                resolve([200, "Loja Atualizado"])
+                resolve([200, "Usuário Atualizado"])
             })
         })
     }
 
     deletar(id) {
-        let sql = `DELETE FROM loja WHERE id="${id}";`
+        let sql = `DELETE FROM carro WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -69,9 +69,9 @@ class Mecanico{
                     reject([400, erro])
                 } else {
                     if (retorno["affectedRows"] > 0) {
-                        resolve([200, "Loja deletado"])
+                        resolve([200, "Carro deletado"])
                     } else {
-                        resolve([404, "Loja não encontrado"])
+                        resolve([404, "Carro não encontrado"])
                     }
                 }
 
