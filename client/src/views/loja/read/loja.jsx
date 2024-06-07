@@ -55,6 +55,8 @@ function Home() {
           ))}
         </tbody>
       </table>
+
+      <a href="/criarloja">Criar</a>
     </div>
   )
 }

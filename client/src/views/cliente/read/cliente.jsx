@@ -57,6 +57,8 @@ function Home() {
           ))}
         </tbody>
       </table>
+
+      <a href="/criarcliente">Criar</a>
     </div>
   )
 }
