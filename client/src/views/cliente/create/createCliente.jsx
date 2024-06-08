@@ -68,7 +68,7 @@ function CreateCliente() {
                 <label>Contato:</label>
                 <input type="text" value={contato} onChange={e => setContato(e.target.value)} /><br />
                 <a href="/loja">Cancelar</a>
-                <button type='submit'>Criar Cliente</button>
+                <button type='submit'>Cadastrar</button>
             </form>
         </div>
     )
