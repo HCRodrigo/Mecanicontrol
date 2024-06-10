@@ -14,8 +14,8 @@ class ClienteController{
     }
     
     create(req,res){
-        let {id_mecanico, nome, email, endereco, contato} = req.body
-        clientes.Inserir(id_mecanico, nome, email, endereco, contato).then(
+        let {nome, contato, email, bairro, numero, rua, complemento} = req.body
+        clientes.Inserir(nome, contato, email, bairro, numero, rua, complemento).then(
             respostas =>{
                 res.status(respostas[0]).json(respostas[1])
             }
@@ -44,9 +44,9 @@ class ClienteController{
 
     update(req, res) {
         let { id } = req.params
-        let {id_mecanico, nome, email, endereco, contato} = req.body
+        let {nome, contato, email, bairro, numero, rua, complemento} = req.body
 
-        clientes.atualizar(id, id_mecanico, nome, email, endereco, contato).then(
+        clientes.atualizar(id, nome, contato, email, bairro, numero, rua, complemento).then(
             resposta => {
                 console.debug("Atualizando Cliente")
                 res.status(resposta[0]).json(resposta[1])

@@ -36,23 +36,17 @@ function Home() {
       <table>
         <thead>
           <tr>
-            <th>id cliente</th>
-            <th>id mecanico</th>
             <th>Nome</th>
-            <th>Email</th>
-            <th>Endereco</th>
             <th>Contato</th>
+            <th>Rua</th>
           </tr>
         </thead>
         <tbody>
           {clientes.map(cliente => (
             <tr key={cliente.id}>
-              <td>{cliente.id}</td>
-              <td>{cliente.id_mecanico}</td>
               <td>{cliente.nome}</td>
-              <td>{cliente.email}</td>
-              <td>{cliente.endereco}</td>
               <td>{cliente.contato}</td>
+              <td>{cliente.rua}</td>
             </tr>
           ))}
         </tbody>

@@ -14,8 +14,8 @@ class MecanicoController{
     }
     
     create(req,res){
-        let {nome, email, senha, endereco, contato} = req.body
-        lojas.Inserir(nome, email, senha, endereco, contato).then(
+        let {nome, contato, email, bairro, numero, rua, complemento} = req.body
+        lojas.Inserir(nome, contato, email, bairro, numero, rua, complemento).then(
             respostas =>{
                 res.status(respostas[0]).json(respostas[1])
             }
@@ -44,9 +44,9 @@ class MecanicoController{
 
     update(req, res) {
         let { id } = req.params
-        let {nome, email, senha, endereco, contato} = req.body
+        let {nome, contato, email, bairro, numero, rua, complemento} = req.body
 
-        lojas.atualizar(id, nome, email, senha, endereco, contato).then(
+        lojas.atualizar(id, nome, contato, email, bairro, numero, rua, complemento).then(
             resposta => {
                 console.debug("Atualizando Loja")
                 res.status(resposta[0]).json(resposta[1])

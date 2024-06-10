@@ -8,7 +8,7 @@ import Sidebar from './components/sidebar';
 import Logar from './views/Logar/index';
 import Nota from './views/nota/read/nota'
 import CreateNota from './views/nota/create/createNota'
-import Agendamentos from './views/agendamento/agendamento'
+import Agendamentos from './views/agendamento/read/agendamento'
 
 function App() {
   return (

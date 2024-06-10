@@ -36,21 +36,15 @@ function Home() {
       <table>
         <thead>
           <tr>
-            <th>id</th>
             <th>Nome</th>
-            <th>Email</th>
-            <th>Endereco</th>
-            <th>Contato</th>
+            <th>Rua</th>
           </tr>
         </thead>
         <tbody>
           {lojas.map(loja => (
             <tr key={loja.id}>
-              <td>{loja.id}</td>
               <td>{loja.nome}</td>
-              <td>{loja.email}</td>
-              <td>{loja.endereco}</td>
-              <td>{loja.contato}</td>
+              <td>{loja.rua}</td>
             </tr>
           ))}
         </tbody>

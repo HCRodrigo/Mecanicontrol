@@ -20,10 +20,10 @@ class Cliente{
         })
     }   
 
-    Inserir(id_mecanico, nome, email, endereco, contato){
+    Inserir(nome, contato, email, bairro, numero, rua, complemento){
         return new Promise((resolve, reject)=>{
-            let sql = `INSERT INTO cliente (id_mecanico, nome, email, endereco, contato) 
-            VALUE ('${id_mecanico}','${nome}','${email}','${endereco}','${contato}')`
+            let sql = `INSERT INTO cliente (nome, contato, email, bairro, numero, rua, complemento) 
+            VALUE ('${nome}','${contato}','${email}','${bairro}', '${numero}', '${rua}', '${complemento}')`
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -48,8 +48,8 @@ class Cliente{
         })
     }
 
-    atualizar(id, id_mecanico, nome, email, endereco, contato) {
-        let sql = `UPDATE cliente SET id_mecanico="${id_mecanico}", nome="${nome}", email="${email}", endereco="${endereco}", contato="${contato}"  WHERE id="${id}";`
+    atualizar(id, nome, contato, email, bairro, numero, rua, complemento) {
+        let sql = `UPDATE cliente SET nome="${nome}", contato="${contato}", email="${email}", bairro="${bairro}", numero="${numero}", rua="${rua}", complemento="${complemento}" WHERE id="${id}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
