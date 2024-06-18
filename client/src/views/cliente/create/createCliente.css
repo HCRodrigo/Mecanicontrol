@@ -9,3 +9,34 @@ body{
     margin-right: auto;
     margin-top: 400px;
 }
+
+.box{
+    margin: 30%;
+    margin-left: 30%;
+    margin-top: 3%; 
+    padding: 100px 100px;  
+}
+
+.titleclientback{
+    background-color: #25295B;
+    width: 110%;
+    border-radius: 60px;
+    padding: 10px 20px;
+    
+}
+
+.titleclient{
+    margin-left: 50px;
+    font-size: 270%;
+}
+
+
+.cadastro-client{
+    font-size: 20px;
+    padding: 5px 9px;
+    width: 590px;
+    border-radius: 40px;
+    border: 5px solid #25295B;
+    margin-top: 15px;   
+}
+

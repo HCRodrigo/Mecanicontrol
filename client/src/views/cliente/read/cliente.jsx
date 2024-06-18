@@ -32,7 +32,13 @@ function Home() {
 
   return (
     <div className='container'>
-      <h1>Todos os clientes</h1>
+
+      <div className='backclint'>
+          <h1 className='titlecliente'>Clientes</h1>
+      </div>
+      
+      <a href="/criarcliente">Criar</a>
+      
       <table>
         <thead>
           <tr>
@@ -52,7 +58,7 @@ function Home() {
         </tbody>
       </table>
 
-      <a href="/criarcliente">Criar</a>
+      
     </div>
   )
 }

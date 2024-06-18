@@ -4,8 +4,20 @@ body{
 }
 
 .container{
-    width: 500px; /* Define a largura da div content */
+    width: 1000px; /* Define a largura da div content */
     margin-left: 300px; /* Move a div content para a direita */
     margin-right: auto;
     margin-top: 110px;
+}
+
+.backclint{
+    width: 290px;
+    margin-left: 580px;
+    background-color: #25295B;
+    border-radius: 60px;
+}
+
+.titlecliente{
+    margin-left: 75px;
+    padding: 10px 7px;
 }
