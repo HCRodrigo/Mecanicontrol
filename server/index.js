@@ -6,7 +6,7 @@ const conexao = mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"",
-    database:"dbmecanicontrol"
+    database:"dadw"
 })
 
 server.use(express.static("public"))

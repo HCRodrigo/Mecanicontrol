@@ -33,8 +33,8 @@ class Mecanico{
         })
     }
 
-    selecionarAgendamentos(id) {
-        let sql = `SELECT * FROM agendamento WHERE id="${id}";`
+    selecionarAgendamentos(id_agendamento) {
+        let sql = `SELECT * FROM agendamento WHERE id_agendamento="${id_agendamento}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -47,8 +47,8 @@ class Mecanico{
         })
     }
 
-    atualizar(id, id_cliente, dia, hora, descricao) {
-        let sql = `UPDATE agendamento SET id_cliente="${id_cliente}", dia="${dia}", hora="${hora}", descricao="${descricao}"  WHERE id="${id}";`
+    atualizar(id_agendamento, id_cliente, dia, hora, descricao) {
+        let sql = `UPDATE agendamento SET id_cliente="${id_cliente}", dia="${dia}", hora="${hora}", descricao="${descricao}"  WHERE id_agendamento="${id_agendamento}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -60,8 +60,8 @@ class Mecanico{
         })
     }
 
-    deletar(id) {
-        let sql = `DELETE FROM agendamento WHERE id="${id}";`
+    deletar(id_agendamento) {
+        let sql = `DELETE FROM agendamento WHERE id_agendamento="${id_agendamento}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {

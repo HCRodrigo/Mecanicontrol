@@ -49,7 +49,7 @@ function Home() {
         </thead>
         <tbody>
           {clientes.map(cliente => (
-            <tr key={cliente.id}>
+            <tr key={cliente.id_cliente}>
               <td>{cliente.nome}</td>
               <td>{cliente.contato}</td>
               <td>{cliente.rua}</td>

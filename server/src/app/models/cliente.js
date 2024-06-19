@@ -9,7 +9,7 @@ class Cliente{
 
     mostrarTudo(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM cliente"
+            let sql = "SELECT * FROM clienteview"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])
@@ -34,8 +34,8 @@ class Cliente{
         })
     }
 
-    selecionarCliente(id) {
-        let sql = `SELECT * FROM cliente WHERE id="${id}";`
+    selecionarCliente(id_cliente) {
+        let sql = `SELECT * FROM cliente WHERE id_cliente="${id_cliente}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -48,9 +48,8 @@ class Cliente{
         })
     }
 
-    atualizar(id, nome, contato, email, bairro, numero, rua, complemento) {
-        let sql = `UPDATE cliente SET nome="${nome}", contato="${contato}", email="${email}", bairro="${bairro}", numero="${numero}", rua="${rua}", complemento="${complemento}" WHERE id="${id}";`
-
+    atualizar(id_cliente, nome, contato, email, bairro, numero, rua, complemento) {
+        let sql = `UPDATE cliente SET nome="${nome}", contato="${contato}", email="${email}", bairro="${bairro}", numero="${numero}", rua="${rua}", complemento="${complemento}" WHERE id_cliente="${id_cliente}";`
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
                 if (erro) {
@@ -61,8 +60,8 @@ class Cliente{
         })
     }
 
-    deletar(id) {
-        let sql = `DELETE FROM cliente WHERE id="${id}";`
+    deletar(id_cliente) {
+        let sql = `DELETE FROM cliente WHERE id_cliente="${id_cliente}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {

@@ -36,9 +36,6 @@ function Home() {
       <table>
         <thead>
           <tr>
-            <th>id nota</th>
-            <th>id mecanico</th>
-            <th>id loja</th>
             <th>Codigo</th>
             <th>Número de fabricação</th>
             <th>Descrição</th>
@@ -52,9 +49,6 @@ function Home() {
         <tbody>
           {notas.map(nota => (
             <tr key={nota.id}>
-              <td>{nota.id}</td>
-              <td>{nota.id_mecanico}</td>
-              <td>{nota.id_loja}</td>
               <td>{nota.codigo}</td>
               <td>{nota.n_fabricacao}</td>
               <td>{nota.descricao}</td>

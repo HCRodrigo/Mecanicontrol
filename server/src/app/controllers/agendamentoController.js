@@ -27,9 +27,9 @@ class MecanicoController{
     }
 
     get(req, res) {
-        let { id } = req.params
+        let { id_agendamento } = req.params
 
-        agendamentos.selecionarAgendamentos(id).then(
+        agendamentos.selecionarAgendamentos(id_agendamento).then(
             resposta => {
                 console.debug("Exibindo Agendamento")
                 res.status(resposta[0]).json(resposta[1])
@@ -43,10 +43,10 @@ class MecanicoController{
     }
 
     update(req, res) {
-        let { id } = req.params
+        let { id_agendamento } = req.params
         let { id_cliente, dia, hora, descricao } = req.body
 
-        agendamentos.atualizar(id, id_cliente, dia, hora, descricao).then(
+        agendamentos.atualizar(id_agendamento, id_cliente, dia, hora, descricao).then(
             resposta => {
                 console.debug("Atualizando Agendamento")
                 res.status(resposta[0]).json(resposta[1])
@@ -60,9 +60,9 @@ class MecanicoController{
     }
 
     delete(req, res) {
-        let { id } = req.params
+        let { id_agendamento } = req.params
 
-        agendamentos.deletar(id).then(
+        agendamentos.deletar(id_agendamento).then(
             resposta => {
                 console.debug("Deletando Agendamento")
                 res.status(resposta[0]).json(resposta[1])

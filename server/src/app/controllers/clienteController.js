@@ -27,9 +27,9 @@ class ClienteController{
     }
 
     get(req, res) {
-        let { id } = req.params
+        let { id_cliente } = req.params
 
-        clientes.selecionarCliente(id).then(
+        clientes.selecionarCliente(id_cliente).then(
             resposta => {
                 console.debug("Exibindo Cliente")
                 res.status(resposta[0]).json(resposta[1])
@@ -43,10 +43,10 @@ class ClienteController{
     }
 
     update(req, res) {
-        let { id } = req.params
+        let { id_cliente } = req.params
         let {nome, contato, email, bairro, numero, rua, complemento} = req.body
 
-        clientes.atualizar(id, nome, contato, email, bairro, numero, rua, complemento).then(
+        clientes.atualizar(id_cliente, nome, contato, email, bairro, numero, rua, complemento).then(
             resposta => {
                 console.debug("Atualizando Cliente")
                 res.status(resposta[0]).json(resposta[1])
@@ -60,9 +60,9 @@ class ClienteController{
     }
 
     delete(req, res) {
-        let { id } = req.params
+        let { id_cliente } = req.params
 
-        clientes.deletar(id).then(
+        clientes.deletar(id_cliente).then(
             resposta => {
                 console.debug("Deletando Cliente")
                 res.status(resposta[0]).json(resposta[1])

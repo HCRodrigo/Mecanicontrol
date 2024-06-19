@@ -33,8 +33,8 @@ class Mecanico{
         })
     }
 
-    selecionarCarro(id) {
-        let sql = `SELECT * FROM carro WHERE id="${id}";`
+    selecionarCarro(id_carro) {
+        let sql = `SELECT * FROM carro WHERE id_carro="${id_carro}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -47,8 +47,8 @@ class Mecanico{
         })
     }
 
-    atualizar(id, id_cliente, marca, modelo, ano, historico_manutencao) {
-        let sql = `UPDATE carro SET id_cliente="${id_cliente}", marca="${marca}", modelo="${modelo}", ano="${ano}", historico_manutencao="${historico_manutencao}"  WHERE id="${id}";`
+    atualizar(id_carro, id_cliente, marca, modelo, ano, historico_manutencao) {
+        let sql = `UPDATE carro SET id_cliente="${id_cliente}", marca="${marca}", modelo="${modelo}", ano="${ano}", historico_manutencao="${historico_manutencao}"  WHERE id_carro="${id_carro}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {
@@ -60,8 +60,8 @@ class Mecanico{
         })
     }
 
-    deletar(id) {
-        let sql = `DELETE FROM carro WHERE id="${id}";`
+    deletar(id_carro) {
+        let sql = `DELETE FROM carro WHERE id_carro="${id_carro}";`
 
         return new Promise((resolve, reject) => {
             this.conexao.query(sql, function (erro, retorno) {

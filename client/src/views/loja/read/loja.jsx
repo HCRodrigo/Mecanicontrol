@@ -42,9 +42,10 @@ function Home() {
         </thead>
         <tbody>
           {lojas.map(loja => (
-            <tr key={loja.id}>
+            <tr key={loja.id_loja}>
               <td>{loja.nome}</td>
               <td>{loja.rua}</td>
+              <td>{loja.local_peca}</td>
             </tr>
           ))}
         </tbody>

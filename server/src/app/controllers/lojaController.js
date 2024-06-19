@@ -27,9 +27,9 @@ class MecanicoController{
     }
 
     get(req, res) {
-        let { id } = req.params
+        let { id_loja } = req.params
 
-        lojas.selecionarLoja(id).then(
+        lojas.selecionarLoja(id_loja).then(
             resposta => {
                 console.debug("Exibindo Loja")
                 res.status(resposta[0]).json(resposta[1])
@@ -43,10 +43,10 @@ class MecanicoController{
     }
 
     update(req, res) {
-        let { id } = req.params
+        let { id_loja } = req.params
         let {nome, contato, email, bairro, numero, rua, complemento} = req.body
 
-        lojas.atualizar(id, nome, contato, email, bairro, numero, rua, complemento).then(
+        lojas.atualizar(id_loja, nome, contato, email, bairro, numero, rua, complemento).then(
             resposta => {
                 console.debug("Atualizando Loja")
                 res.status(resposta[0]).json(resposta[1])
@@ -60,9 +60,9 @@ class MecanicoController{
     }
 
     delete(req, res) {
-        let { id } = req.params
+        let { id_loja } = req.params
 
-        lojas.deletar(id).then(
+        lojas.deletar(id_loja).then(
             resposta => {
                 console.debug("Deletando Loja")
                 res.status(resposta[0]).json(resposta[1])
