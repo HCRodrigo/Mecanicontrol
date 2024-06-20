@@ -31,8 +31,15 @@ function Home() {
   })
 
   return (
-    <div className='container'>
-      <h1>Todas as notas</h1>
+    <div className='box'>
+
+      <div className='back-title-nota'>
+        <h1 className='title-nota'>Notas</h1>
+      </div>
+
+      <a href="/criarnota"><input className='button-criar' type="button" value="Criar" /></a>
+      
+      
       <table>
         <thead>
           <tr>
@@ -68,7 +75,7 @@ function Home() {
         </tbody>
       </table>
 
-      <a href="/criarnota">Criar</a>
+      
     </div>
   )
 }

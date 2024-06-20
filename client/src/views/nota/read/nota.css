@@ -3,9 +3,17 @@ body{
     color: white;
 }
 
-.container{
-    width: 500px; /* Define a largura da div content */
-    margin-left: 300px; /* Move a div content para a direita */
-    margin-right: auto;
-    margin-top: 110px;
+.back-title-nota{
+    background-color: #25295B;
+    width: 400px;
+    height: 80px;
+    margin-left: 600px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+}
+
+.title-nota{
+    margin-left: 150px;
 }

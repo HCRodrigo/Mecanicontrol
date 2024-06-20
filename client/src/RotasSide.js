@@ -9,6 +9,7 @@ import Logar from './views/Logar/index';
 import Nota from './views/nota/read/nota'
 import CreateNota from './views/nota/create/createNota'
 import Agendamentos from './views/agendamento/read/agendamento'
+import Home from './views/home/home'
 
 function RotasSide() {
     return (
@@ -23,7 +24,8 @@ function RotasSide() {
                 <Route path='/criarloja' element={<CreateLoja/>}/>
                 <Route path='/nota' element={<Nota/>}/>
                 <Route path='/criarnota' element={<CreateNota/>}/>
-                <Route path='/agendamento' element={<Agendamentos/>}/>           
+                <Route path='/agendamento' element={<Agendamentos/>}/> 
+                <Route path='/home' element={<Home/>}/>          
             </Routes>
   
         </>
