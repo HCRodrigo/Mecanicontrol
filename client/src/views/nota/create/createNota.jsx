@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './createNota.css'
 
 function CreateNota() {
     let [id_loja, setId_loja] = useState("")
@@ -49,29 +50,36 @@ function CreateNota() {
     }   
         
     return (
-        <div className='container'>
-            <h1>Adicionar Loja</h1>
+        <div className='box'>
+
+            <div className='back-title-create-nota'>
+                <h1 className='title-create-nota'>Cadastro de Nota</h1>
+            </div>
+            
             <form onSubmit={CadastrarNota}>
-                <label>Id da loja:</label>
-                <input type="text" value={id_loja} onChange={e => setId_loja(e.target.value)} /><br />
-                <label>Codigo:</label>
-                <input type="text" value={codigo} onChange={e => setCodigo(e.target.value)} /><br />
-                <label>Número de fabricação:</label>
-                <input type="text" value={n_fabricacao} onChange={e => setN_fabricacao(e.target.value)} /><br />
-                <label>Descrição:</label>
-                <input type="text" value={descricao} onChange={e => setDescricao(e.target.value)} /><br />
-                <label>Quantidde:</label>
-                <input type="text" value={qtd} onChange={e => setQtd(e.target.value)} /><br />
-                <label>Unidade:</label>
-                <input type="text" value={unidade} onChange={e => setUnidade(e.target.value)} /><br />
-                <label>Valor:</label>
-                <input type="text" value={valor} onChange={e => setValor(e.target.value)} /><br />
-                <label>Valor por unidade:</label>
-                <input type="text" value={valor_unidade} onChange={e => setValor_unidade(e.target.value)} /><br />
-                <label>Local de peça:</label>
-                <input type="text" value={local_peca} onChange={e => setLocal_peca(e.target.value)} /><br />
-                <a href="/nota">Cancelar</a>
-                <button type='submit'>Cadastrar</button>
+
+                <input className='input-codigo-loja' type="text" placeholder='Codigo' value={codigo} onChange={e => setCodigo(e.target.value)} />
+                
+                <input className='input-nfabricacao-loja' type="text" placeholder='Nº de fabricação' value={n_fabricacao} onChange={e => setN_fabricacao(e.target.value)} />
+                
+                <input className='input-loja-loja' type="text" placeholder='Loja' value={id_loja} onChange={e => setId_loja(e.target.value)} /><br />
+
+                <input className='input-unidade-loja' type="text" placeholder='Unidade' value={unidade} onChange={e => setUnidade(e.target.value)} />
+
+                <input className='input-vunidade-loja' type="text" placeholder='Valor por unidade' value={valor_unidade} onChange={e => setValor_unidade(e.target.value)} />
+
+                <input className='input-quantidade-loja' type="text" placeholder='Quantidade' value={qtd} onChange={e => setQtd(e.target.value)} /><br />
+
+                <input className='input-localpeca-loja' type="text" placeholder='Local' value={local_peca} onChange={e => setLocal_peca(e.target.value)} />
+
+                <input className='input-valor-loja' type="text" placeholder='Valor total' value={valor} onChange={e => setValor(e.target.value)} /><br />
+
+                <input className='input-descricao-loja' type="text" placeholder='Descrição' value={descricao} onChange={e => setDescricao(e.target.value)} /><br />
+
+
+                <a href="/nota"><input className='button-cancelar-nota' type="button" value="Cancelar" /></a>
+                
+                <button className='button-cadastrar-nota' type='submit'>Cadastrar</button>
             </form>
         </div>
     )

@@ -33,22 +33,25 @@ function Logar() {
     }
   
     return (
-    <div class='container'>
-        <h1>Bem Vindoo</h1>    
-        <input 
-            type="text" 
-            placeholder='Nome'
-            value={nome}
-            onChange={(e)=>setNome(e.target.value)}
-        />
-        <input 
-            type="password" 
-            placeholder='Senha'
-            value={senha}
-            onChange={(e)=>setSenha(e.target.value)}
-        />
-        <button onClick={efetuarLogin}>Logar</button>
-    </div>
+   
+        <div className='fundo'>
+
+        <br />
+
+        <div className='box-login'>
+
+        <h1 className='title-login'>Login</h1> 
+
+        <input className='nome-login' type="text" placeholder='Nome' value={nome} onChange={(e)=>setNome(e.target.value)}/> <br />
+
+        <input className='senha-login' type="password" placeholder='Senha' value={senha}onChange={(e)=>setSenha(e.target.value)}/> <br />
+
+        <button className='btn-login' onClick={efetuarLogin}>Logar</button>
+        </div>
+
+        </div>
+
+    
   )
 }
 

@@ -3,9 +3,70 @@ body{
     color: white;
 }
 
-.container{
-    width: 500px; /* Define a largura da div content */
-    margin-left: 300px; /* Move a div content para a direita */
-    margin-right: 100px;
-    margin-top: 100px;
+
+.box-login{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    width: 400px;
+    margin-left: 730px;
+    height: 400px;
+    margin-top: 250px;
+    border: 3px solid black ;
+    border-radius: 20px;
 }
+
+.title-login{
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+.nome-login{
+    width: 300px;
+    margin-left: 40px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    padding: 7px 7px;
+    margin-top: 60px;
+    border: 5px solid #25295B;
+}
+
+.senha-login{
+    width: 300px;
+    margin-left: 40px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    padding: 7px 7px;
+    margin-top: 20px;
+    border: 5px solid #25295B;
+
+}
+
+.btn-login{
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #25295B;
+    border: none;
+    color: white;
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn-login:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.fundo{
+    background-image: url('./../img/background-img.png');
+    width: 1865px;
+    height: 954px; 
+    background-size: cover; 
+    background-position: center; 
+    
+}
+
