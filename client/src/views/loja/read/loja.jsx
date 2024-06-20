@@ -31,8 +31,15 @@ function Home() {
   })
 
   return (
-    <div className='container'>
-      <h1>Todas as lojas</h1>
+
+      <div className='box'>
+      
+      <div className='back-title-loja'>
+        <h1 className='title-loja'>Todas lojas</h1>
+      </div>
+     
+      <a href="/criarloja"><input className='button-criar' type="button" value="Criar" /></a>
+
       <table>
         <thead>
           <tr>
@@ -50,7 +57,7 @@ function Home() {
         </tbody>
       </table>
 
-      <a href="/criarloja">Criar</a>
+      
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './createLoja.css'
 
 function CreateLoja() {
     let [nome, setNome] = useState("")
@@ -45,27 +46,31 @@ function CreateLoja() {
     }
 
     return (
-        <div className='container'>
-            <h1>Adicionar Loja</h1>
+        <div className='box'>
+
+            <div className='back-title-create-loja'>
+                <h1 className='title-create-loja'>Cadastro de Loja</h1>
+            </div>
+
             <form onSubmit={CadastrarLoja}>
-            <label>Nome:</label>
-                <input type="text" value={nome} onChange={e => setNome(e.target.value)} /><br />
-                <label>Contato:</label>
-                <input type="text" value={contato} onChange={e => setContato(e.target.value)} /><br />
-                <label>Email:</label>
-                <input type="text" value={email} onChange={e => setEmail(e.target.value)} /><br />
-                <label>Bairro:</label>
-                <input type="text" value={bairro} onChange={e => setBairro(e.target.value)} /><br />
-                <label>Número:</label>
-                <input type="text" value={numero} onChange={e => setNumero(e.target.value)} /><br />
-                <label>Rua:</label>
-                <input type="text" value={rua} onChange={e => setRua(e.target.value)} /><br />
-                <label>complemento:</label>
-                <input type="text" value={complemento} onChange={e => setComplemento(e.target.value)} /><br />
+            
+                <input className='input-nome-loja' type="text" placeholder='nome' value={nome} onChange={e => setNome(e.target.value)} />
+                
+                <input className='input-contato-loja' type="text" placeholder='contato' value={contato} onChange={e => setContato(e.target.value)} /><br />
+                
+                <input className='input-email-loja' type="text" placeholder='email' value={email} onChange={e => setEmail(e.target.value)} /><br />
+                
+                <input className='input-bairro-loja' type="text" placeholder='bairro' value={bairro} onChange={e => setBairro(e.target.value)} />
+                
+                <input className='input-numero-loja' type="text" placeholder='numero' value={numero} onChange={e => setNumero(e.target.value)} /><br />
+                
+                <input className='input-rua-loja' type="text" placeholder='rua' value={rua} onChange={e => setRua(e.target.value)} />
+                
+                <input className='input-complemento-loja' type="text" placeholder='complemento' value={complemento} onChange={e => setComplemento(e.target.value)} /><br />
 
-
-                <a href="/loja">Cancelar</a>
-                <button type='submit'>Cadastrar</button>
+                <a href="/loja"><input className='button-cancelar-loja' type="button" value="Cancelar" /></a>
+                
+                <button className='button-cadastrar-loja' type='submit'>Cadastrar</button>
             </form>
         </div>
     )

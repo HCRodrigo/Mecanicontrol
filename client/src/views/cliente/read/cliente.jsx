@@ -31,13 +31,13 @@ function Home() {
   })
 
   return (
-    <div className='container'>
+    <div className='box'>
 
-      <div className='backclint'>
-          <h1 className='titlecliente'>Clientes</h1>
+      <div className='back-title-client'>
+          <h1 className='title-cliente'>Clientes</h1>
       </div>
       
-      <a href="/criarcliente">Criar</a>
+      <a href="/criarcliente"><input className='button-criar' type="button" value="Criar" /></a>
       
       <table>
         <thead>
