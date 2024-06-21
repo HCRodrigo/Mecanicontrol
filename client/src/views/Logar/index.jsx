@@ -25,7 +25,7 @@ function Logar() {
             }else{
                 const dados = await resposta.json()
                 localStorage.setItem("id",dados.id)
-                window.location.href = "/menu"
+                window.location.href = "/home"
             }
         }catch(error){
             console.error("Erro ao fazer login",error)

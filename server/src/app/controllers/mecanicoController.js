@@ -78,6 +78,8 @@ class MecanicoController{
     logar(req, res){
         let {nome,senha} = req.body
 
+        console.debug("teste login")
+
         mecanicos.verificarLoginSenha(nome, senha).then(
             resposta=>{
                 console.debug("Efetuando Login")

@@ -39,24 +39,22 @@ function Home() {
       
       <a href="/criarcliente"><input className='button-criar' type="button" value="Criar" /></a>
       
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Contato</th>
-            <th>Rua</th>
-          </tr>
-        </thead>
-        <tbody>
-          {clientes.map(cliente => (
+      <div className='faixa-client'>
+          <div className='faixa-client-icon'>
+              <h1 className='icon-client'><i class='bx bxs-user icon' ></i></h1>
+          </div>
+
+          <div>
+            {clientes.map(cliente => (
             <tr key={cliente.id}>
               <td>{cliente.nome}</td>
               <td>{cliente.contato}</td>
               <td>{cliente.rua}</td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+            ))}
+          </div>
+
+      </div>
 
       
     </div>

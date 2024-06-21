@@ -8,7 +8,7 @@ body{
     background-color: transparent;
     backdrop-filter: blur(20px);
     width: 400px;
-    margin-left: 730px;
+    margin-left: 760px;
     height: 400px;
     margin-top: 250px;
     border: 3px solid black ;
@@ -63,8 +63,8 @@ body{
 
 .fundo{
     background-image: url('./../img/background-img.png');
-    width: 1865px;
-    height: 954px; 
+    width: 1920px;
+    height: 950px; 
     background-size: cover; 
     background-position: center; 
     

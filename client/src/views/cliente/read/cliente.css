@@ -36,3 +36,26 @@ body{
     transform: scale(1.05);
     background-color: #25235B;
 }
+
+.faixa-client{
+    background-color: #151839;
+    width: 900px;
+    height: 200px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+
+.faixa-client-icon{
+    background-color: #25295B;
+    width: 250px;
+    height: 200px;
+    border-radius: 40px;
+    
+}
+
+.icon-client{
+    font-size: 170px;
+    margin-left: 35px;
+}
+
