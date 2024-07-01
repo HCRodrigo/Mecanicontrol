@@ -13,7 +13,7 @@ server.use(express.static("public"))
 
 conexao.connect(function(error){
     if(error) throw error
-        console.log("Conexão realizada com sucesso")
+    console.log("Conexão realizada com sucesso")
 })
 
 server.listen(5000)

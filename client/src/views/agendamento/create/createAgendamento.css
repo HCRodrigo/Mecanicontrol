@@ -9,3 +9,107 @@ body{
     margin-right: auto;
     margin-top: 400px;
 }
+
+.box{   
+    width: 1500px;
+    height: 800px;
+    margin-top: 100px;
+    margin-left: 280px;
+}
+
+.back-title-create-calendar{
+    background-color: #25295B;
+    width: 400px;
+    height: 80px;
+    margin-left: 600px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+}
+
+.title-create-calendar{
+    margin-left: 40px;
+}
+
+.input-id-cliente-calendar{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 100px;
+    margin-left: 290px;
+}
+
+.input-data-calendar{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.input-hora-calendar{
+    width: 1020px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 290px;
+}
+
+.input-descricao-calendar{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 290px;
+}
+
+.button-cancelar-calendar{
+    width: 180px;
+    height: 60px;
+    border: none;
+    border-radius: 40px;
+    background-color: #25295B;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    margin-top: 10px;
+    margin-left: 950px;
+}
+
+.button-cancelar-calendar:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.button-cadastrar-calendar{
+    width: 180px;
+    height: 60px;
+    border: none;
+    border-radius: 40px;
+    background-color: #25295B;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.button-cadastrar-calendar:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+

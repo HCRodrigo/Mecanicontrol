@@ -3,9 +3,130 @@ body{
     color: white;
 }
 
-.container{
-    width: 2500px; /* Define a largura da div content */
-    margin-left: 300px; /* Move a div content para a direita */
-    margin-right: auto;
-    margin-top: 400px;
+.back-title-create-loja{
+    background-color: #25295B;
+    width: 400px;
+    height: 80px;
+    margin-left: 600px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+}
+
+.title-create-loja{
+    margin-left: 60px;
+}
+
+.input-nome-loja{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 100px;
+    margin-left: 290px;
+}
+
+.input-contato-loja{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.input-email-loja{
+    width: 1020px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 290px;
+}
+
+.input-bairro-loja{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 290px;
+}
+
+.input-numero-loja{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.input-rua-loja{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 290px;
+}
+
+.input-complemento-loja{
+    width: 500px;
+    height: 60px;
+    border: 5px solid #25295B;
+    border-radius: 40px;
+    padding: 7px 7px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.button-cancelar-loja{
+        width: 180px;
+        height: 60px;
+        border: none;
+        border-radius: 40px;
+        background-color: #25295B;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 200ms ease-in-out;
+        margin-top: 10px;
+        margin-left: 950px;
+}
+    
+.button-cancelar-loja:hover{
+        transform: scale(1.05);
+        background-color: #25235B;
+}
+
+
+.button-cadastrar-loja{
+        width: 180px;
+        height: 60px;
+        border: none;
+        border-radius: 40px;
+        background-color: #25295B;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 200ms ease-in-out;
+        margin-top: 10px;
+        margin-left: 10px;
+}
+    
+    .button-cadastrar-loja:hover{
+        transform: scale(1.05);
+        background-color: #25235B;
 }

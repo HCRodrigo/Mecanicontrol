@@ -45,48 +45,35 @@ function CreateCliente() {
         }
     }
 
-    /*
-    <select 
-        name="" 
-        id=""
-        value={id_categoria}
-        onChange={e => setid_categoria(e.target.value)}
-        >
-      {categorias.map(categoria=>(
-            <option key={categoria.id_categoria} value={categoria.id_categoria}>{categoria.nome}</option>
-        ))}                
-    </select>
-    */
-
     return (
         <div className='box'>
 
-            <div className='titleclientback'>
-                <h1 className='titleclient'>Cadastro de Cliente</h1>
+            <div className='back-title-create-client'>
+                <h1 className='title-create-client'>Cadastro de Cliente</h1>
             </div>
             
 
             <form onSubmit={CadastrarCliente}>
 
                 
-                <input className='cadastro-client' type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} /><br />
+                <input className='input-nome-client' type="text" placeholder='Nome' value={nome} onChange={e => setNome(e.target.value)} />
 
-                <input className='cadastro-client' type="text" placeholder='Contato' value={contato} onChange={e => setContato(e.target.value)} /><br />
+                <input className='input-contato-client' type="text" placeholder='Contato' value={contato} onChange={e => setContato(e.target.value)} /><br />
 
-                <input className='cadastro-client' type="text" placeholder='email' value={email} onChange={e => setEmail(e.target.value)} /><br />
+                <input className='input-email-client' type="text" placeholder='email' value={email} onChange={e => setEmail(e.target.value)} /><br />
                 
-                <input className='cadastro-client' type="text" placeholder='bairro' value={bairro} onChange={e => setBairro(e.target.value)} /><br />
+                <input className='input-bairro-client' type="text" placeholder='bairro' value={bairro} onChange={e => setBairro(e.target.value)} />
 
-                <input className='cadastro-client' type="text" placeholder='numero' value={numero} onChange={e => setNumero(e.target.value)} /><br />
+                <input className='input-numero-client' type="text" placeholder='numero' value={numero} onChange={e => setNumero(e.target.value)} /><br />
                 
-                <input className='cadastro-client' type="text" placeholder='rua' value={rua} onChange={e => setRua(e.target.value)} /><br />
+                <input className='input-rua-client' type="text" placeholder='rua' value={rua} onChange={e => setRua(e.target.value)} />
                 
-                <input className='cadastro-client' type="text" placeholder='complemento' value={complemento} onChange={e => setComplemento(e.target.value)} /><br />
+                <input className='input-complemento-client' type="text" placeholder='complemento' value={complemento} onChange={e => setComplemento(e.target.value)} /><br />
 
 
-                <a href="/cliente">Cancelar</a>
+                <a href="/cliente"><input className='button-cancelar-client' type="button" value="Cancelar" /></a>
                 
-                <button type='submit'>Cadastrar</button>
+                <button className='button-cadastrar-client' type='submit'>Cadastrar</button>
             </form>
             
         </div>

@@ -10,7 +10,6 @@ function Home() {
                 </div>
                 <div class="sidebar">
                     <div class="menu">
-                        <i class='bx bx-menu menu-icon'></i>
                         <span class="icon-name">MECANICONTROL</span>
                     </div>
                     <div class="sidebar-content">
@@ -47,12 +46,6 @@ function Home() {
                             </li>
                         </ul>
                         <div class="bottom-cotent">
-                            <li class="list">
-                                <a href="#" class="nav-link">
-                                    <i class='bx bxs-cog icon' ></i>
-                                    <span class="link">Configurações</span>
-                                </a>
-                            </li>
                             <li class="list">
                                 <a href="/" class="nav-link">
                                     <i class='bx bx-log-in icon'></i>

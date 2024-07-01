@@ -1,0 +1,97 @@
+.btn-client-home{
+    width: 250px;
+    height: 250px; 
+    border-radius: 30px; 
+    border:none; 
+    background-color: #151839;
+    color: white;
+    font-size: 130px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    margin-top: 260px;
+    margin-left: 200px;
+}
+
+.btn-client-home:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.title-btn-client{
+    font-size: 40px;
+}
+
+/**/
+
+.btn-loja-home{
+    width: 250px;
+    height: 250px; 
+    border-radius: 30px; 
+    border:none; 
+    background-color: #151839;
+    color: white;
+    font-size: 130px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    margin-top: 230px;
+    margin-left: 50px;
+}
+
+.btn-loja-home:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.title-btn-loja{
+    font-size: 40px;
+}
+
+/**/
+
+.btn-nota-home{
+    width: 250px;
+    height: 250px; 
+    border-radius: 30px; 
+    border:none; 
+    background-color: #151839;
+    color: white;
+    font-size: 130px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    margin-top: 230px;
+    margin-left: 50px;
+}
+
+.btn-nota-home:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.title-btn-nota{
+    font-size: 40px;
+}
+
+/**/
+
+.btn-calendario-home{
+    width: 250px;
+    height: 250px; 
+    border-radius: 30px; 
+    border:none; 
+    background-color: #151839;
+    color: white;
+    font-size: 130px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+    margin-top: 230px;
+    margin-left: 50px;
+}
+
+.btn-calendario-home:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.title-btn-calendario{
+    font-size: 40px;
+}

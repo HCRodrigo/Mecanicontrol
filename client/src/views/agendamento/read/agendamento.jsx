@@ -31,23 +31,29 @@ function Home() {
   })
 
   return (
-    <div className='container'>
-      <h1>Todos os agendamentos</h1>
-      <table>
+    <div className='box'>
+
+    <div className='back-title-calendar'>
+        <h1 className='title-calendar'>Agendamento</h1>
+    </div>
+
+    <a href="/criarAgendamento"><input className='button-criar' type="button" value="Criar" /></a>
+
+    <div className='faixa-calendar'>
+        <div className='faixa-calendar-icon'>
+            <h1 className='icon-calendar'><i class='bx bxs-calendar icon' ></i></h1>
+        </div>
+      <table className='information'>
         <thead>
           <tr>
-            <th>id agendamento</th>
-            <th>id client</th>
             <th>Dia</th>
-            <th>Hora</th>            
+            <th>Hora</th>
             <th>Descrição</th>
           </tr>
         </thead>
         <tbody>
           {agendamentos.map(agendamento => (
             <tr key={agendamento.id}>
-              <td>{agendamento.id}</td>
-              <td>{agendamento.id_cliente}</td>
               <td>{agendamento.dia}</td>
               <td>{agendamento.hora}</td>
               <td>{agendamento.descricao}</td>
@@ -55,6 +61,7 @@ function Home() {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   )
 }

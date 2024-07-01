@@ -4,17 +4,16 @@ function CreateAgendamento() {
     let [id_cliente, setId_cliente] = useState([])
     let [data, setData] = useState("")
     let [hora, setHora] = useState("")
-    let [descricao, setDirecao] = useState("")
+    let [descricao, setDescricao] = useState("")
 
     async function CadastrarAgendamento(event){
       
       event.preventDefault()
-      const clienteData = {
-          id_mecanico,
-          nome,
-          email,
-          endereco,
-          contato
+      const agendamentoData = {
+          id_cliente,
+          data,
+          hora,
+          descricao
       }
 
       try {
@@ -23,7 +22,7 @@ function CreateAgendamento() {
               headers:{
                   "Content-Type":"application/json"
               },
-              body: JSON.stringify(clienteData)
+              body: JSON.stringify(agendamentoData)
           })
 
           if(!resposta.ok){
@@ -40,19 +39,24 @@ function CreateAgendamento() {
     }   
         
     return (
-        <div className='container'>
-            <h1>Adicionar Cliente</h1>
+        <div className='box'>
+            
+            <div className='back-title-create-calendar'>
+                <h1 className='title-create-calendar'>Adicionar Agendamento</h1>
+            </div>
+            
             <form onSubmit={CadastrarAgendamento}>
-                <label>Id do cliente:</label><br />
-                <input type="text" value={id_cliente} onChange={e => setId_cliente(e.target.value)} /><br />
-                <label>Data:</label>
-                <input type="text" value={data} onChange={e => setData(e.target.value)} /><br />
-                <label>Hora:</label>
-                <input type="text" value={hora} onChange={e => setHora(e.target.value)} /><br />
-                <label>Descrição:</label>
-                <input type="text" value={descricao} onChange={e => setEndereco(e.target.value)} /><br />
-                <a href="/loja">Cancelar</a>
-                <button type='submit'>Cadastrar</button>
+                <input className='input-id-cliente-calendar' type="text" placeholder='id do cliente' value={id_cliente} onChange={e => setId_cliente(e.target.value)} /><br />
+            
+                <input className='input-data-calendar' type="text" placeholder='data' value={data} onChange={e => setData(e.target.value)} /><br />
+                
+                <input className='input-hora-calendar' type="text" placeholder='hora' value={hora} onChange={e => setHora(e.target.value)} /><br />
+                
+                <input className='input-descricao-calendar' type="text" placeholder='descrição' value={descricao} onChange={e => setDescricao(e.target.value)} /><br />
+                
+                <a href="/agendamento"><input className='button-cancelar-calendar' type="button" value="Cancelar" /></a>
+                
+                <button className='button-cadastrar-calendar' type='submit'>Cadastrar</button>
             </form>
         </div>
     )

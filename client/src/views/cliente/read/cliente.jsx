@@ -31,34 +31,37 @@ function Home() {
   })
 
   return (
-    <div className='container'>
+    <div className='box'>
 
-      <div className='backclint'>
-          <h1 className='titlecliente'>Clientes</h1>
+      <div className='back-title-client'>
+          <h1 className='title-cliente'>Clientes</h1>
       </div>
       
-      <a href="/criarcliente">Criar</a>
-      
-      <table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Contato</th>
-            <th>Rua</th>
-          </tr>
-        </thead>
-        <tbody>
-          {clientes.map(cliente => (
-            <tr key={cliente.id_cliente}>
-              <td>{cliente.nome}</td>
-              <td>{cliente.contato}</td>
-              <td>{cliente.rua}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <a href="/criarcliente"><input className='button-criar' type="button" value="Criar" /></a>
 
-      
+      <div className='faixa-client'>
+          <div className='faixa-client-icon'>
+              <h1 className='icon-client'><i class='bx bxs-user icon' ></i></h1>
+          </div>
+        <table className='information'>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Contato</th>
+              <th>Rua</th>
+            </tr>
+          </thead>
+          <tbody>
+            {clientes.map(cliente => (
+              <tr key={cliente.id}>
+                <td>{cliente.nome}</td>
+                <td>{cliente.contato}</td>
+                <td>{cliente.rua}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ class Cliente{
 
     mostrarTudo(){
         return new Promise((resolve, reject)=>{
-            let sql = "SELECT * FROM clienteview"
+            let sql = "SELECT * FROM cliente"
             this.conexao.query(sql,function(error,retorno){
                 if(error){
                     reject([400,error])

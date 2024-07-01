@@ -3,21 +3,63 @@ body{
     color: white;
 }
 
-.container{
-    width: 1000px; /* Define a largura da div content */
-    margin-left: 300px; /* Move a div content para a direita */
-    margin-right: auto;
-    margin-top: 110px;
-}
 
-.backclint{
-    width: 290px;
-    margin-left: 580px;
+
+.back-title-client{
     background-color: #25295B;
-    border-radius: 60px;
+    width: 400px;
+    height: 80px;
+    margin-left: 600px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
 }
 
-.titlecliente{
-    margin-left: 75px;
-    padding: 10px 7px;
+.title-cliente{
+    margin-left: 130px;
+}
+
+.button-criar{
+    width: 180px;
+    height: 60px;
+    border: none;
+    border-radius: 40px;
+    background-color: #25295B;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.button-criar:hover{
+    transform: scale(1.05);
+    background-color: #25235B;
+}
+
+.faixa-client{
+    background-color: #151839;
+    width: 900px;
+    height: 200px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+
+.faixa-client-icon{
+    background-color: #25295B;
+    width: 250px;
+    height: 200px;
+    border-radius: 40px;
+    
+}
+
+.icon-client{
+    font-size: 170px;
+    margin-left: 35px;
+}
+
+.information{
+    margin-top: -175px;
+    margin-left: 260px;
 }

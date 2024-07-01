@@ -9,3 +9,45 @@ body{
     margin-right: auto;
     margin-top: 110px;
 }
+
+.back-title-calendar{
+    background-color: #25295B;
+    width: 400px;
+    height: 80px;
+    margin-left: 600px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+}
+
+.title-calendar{
+    margin-left: 80px;
+}
+
+.faixa-calendar{
+    background-color: #151839;
+    width: 900px;
+    height: 200px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+
+.faixa-calendar-icon{
+    background-color: #25295B;
+    width: 230px;
+    height: 200px;
+    border-radius: 40px;
+    
+}
+
+.icon-calendar{
+    font-size: 160px;
+    margin-left: 35px;
+}
+
+.information{
+    margin-top: -175px;
+    margin-left: 250px;
+}
